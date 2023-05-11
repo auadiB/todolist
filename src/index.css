@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgb(53,59,59);
+    background: linear-gradient(90deg, rgba(53,59,59,1) 0%, rgba(78,80,85,1) 48%, rgba(114,123,126,1) 100%);
+    padding: 1rem;
+}
+
+.new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.new-item-form input {
+    outline: none;
+    border: 2px solid #1b263b;
+    padding: 0.4em 0.8em;
+    border-radius: 0.3em;
+    background: #415a77;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn {
+    padding: 0.25em;
+    background-color: #778da9;
+    border: 2px solid #415a77;
+    border-radius: 0.3em;
+    color: #1b263b;
+    cursor: pointer;
+}
+
+.list-title {
+    margin-top: 1em;
+}
+
+.list-item {
+    list-style: none;
+    margin-left: 1em;
+    padding-top: 0.5em;
+}
+
+.list-item li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.list-item li label {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.list-item li:has(input:checked) label {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: line-through 2px solid red;
+}   
+
+.list-item li input {
+    outline: none;
+    pointer-events: none;
+}
+
+.btn-delete {
+    padding: 0.4em;
+    border-radius: 0.4em;
+    border: 2px solid #415a77;
+    color: #1b263b;
+    background-color: #778da9;
+    font-weight: 800;
+}
+
+.btn:hover,
+.btn-delete:hover{
+    background-color: #415a77;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn:active,
+.btn-delete:active {
+    border: 2px solid #415a77;
+    box-shadow: 0 0 0 1px;
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+
+
