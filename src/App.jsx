@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import { NewItemForm } from "./NewItemForm"
 import { TodoList } from "./TodoList"
+import { SearchBar } from "./SearchBar"
 
 export default function App() {
+  
   const [todos, setTodos] =useState(() => {
     const localValue = localStorage.getItem('ITEMS')
     if(localValue == null) return []
@@ -52,6 +54,7 @@ export default function App() {
       <NewItemForm onSubmit={addTodo}/>
       <h1 className="list-title">Todo List</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+      <SearchBar />
     </>
   )
 }
